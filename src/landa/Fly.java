@@ -1,5 +1,9 @@
 package landa;
 
+import sun.swing.BakedArrayList;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -12,6 +16,7 @@ public class Fly {
     private TypeFly typeFly;
     private int weight;
     private String name;
+    private List<Foo> foos=new ArrayList<>();
 
 
     public Fly(int age, TypeFly typeFly, int weight, String name) {
@@ -19,6 +24,14 @@ public class Fly {
         this.typeFly = typeFly;
         this.weight = weight;
         this.name = name;
+    }
+
+    public List<Foo> getFoos() {
+        return foos;
+    }
+
+    public void setFoos(List<Foo> foos) {
+        this.foos = foos;
     }
 
     public int getId() {
